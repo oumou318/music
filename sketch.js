@@ -1,26 +1,20 @@
-
-
-// var can = 600;
-// var vas = 600; can create canvas have variables. i tried it didnt work
+//Oumou is the Driver
+//James is the Typer
 
 
 
 function setup() {
-  createCanvas(600,600);
-  background('green');   // omg r u ready??? phenomenal so since background is only created once
+  createCanvas(1000,1000);
 }
 
 function draw() {
-  // background('green'); // What happens when bakground is moved to setup????? here background is created over and over
-  noStroke();   // to make it like a painting
-  fill(0, 255, 0, 100); // add some transparency
-  ellipse(mouseX, mouseY, 100, 40); 
-  stroke(7);
-  rect(200, 300, 100,40);
+  background(0);
+  for(x = 0; x<=width; x+=200) {
+    for (var y = 0; y<=height; y+=100) {
+    fill(random(255), random(255),random(255));
+    frameRate(10);
+    rect(x,y,50,50);
+    }
+  }
   
 }
-
-function mousePressed() {
-  background('green');
-}
-// mousePressed is an event patiently waiting
